@@ -1,0 +1,154 @@
+# Module 1: Introduction to C Programming
+
+## What is C?
+
+C is a general-purpose programming language developed by Dennis Ritchie in 1972 at Bell Labs.
+
+It is known as a middle-level language because it combines the features of both low-level and high-level programming languages. C allows programmers to work closely with computer hardware while also providing structured programming features.
+
+---
+
+## Why is C Used in This Course?
+
+C is usually taught first because it provides a strong foundation for learning other programming languages such as C++ and Python.
+
+### 1. Builds Programming Logic
+
+C helps students understand:
+
+* Variables
+* Data Types
+* Operators
+* Conditional Statements
+* Loops
+* Functions
+
+These concepts are common to almost all programming languages.
+
+### 2. Understanding Memory
+
+C provides direct access to memory through pointers. This helps students understand:
+
+* Memory allocation
+* Memory addresses
+* Program execution
+
+### 3. High Performance
+
+C programs are compiled into machine code, making them very fast and efficient.
+
+### 4. Foundation for C++
+
+Most of the syntax of C++ comes from C. Learning C first makes C++ easier to understand.
+
+### 5. Useful for Technical Careers
+
+Knowledge of C is valuable in:
+
+* Software Development
+* System Programming
+* Cybersecurity
+* Blockchain Development
+* High Performance Computing (HPC)
+
+---
+
+## Applications of C
+
+### Operating Systems
+
+Examples:
+
+* Linux Kernel
+* Windows Components
+* macOS Components
+
+### Embedded Systems
+
+Examples:
+
+* Microcontrollers
+* IoT Devices
+* Routers
+
+### Database Systems
+
+Examples:
+
+* MySQL
+* PostgreSQL
+* SQLite
+
+### Compilers
+
+Examples:
+
+* GCC
+* Clang
+
+### High Performance Computing
+
+Examples:
+
+* Scientific Simulations
+* Weather Forecasting
+* Supercomputers
+
+---
+
+## Structure of a C Program
+
+```c
+#include <stdio.h>
+
+int main() {
+    printf("Hello World");
+    return 0;
+}
+```
+
+### Explanation
+
+1. #include <stdio.h>
+
+   * Includes the Standard Input Output library.
+
+2. int main()
+
+   * Entry point of the program.
+
+3. printf()
+
+   * Displays output on the screen.
+
+4. return 0;
+
+   * Indicates successful execution of the program.
+
+---
+
+## Advantages of C
+
+* Fast execution speed
+* Efficient memory usage
+* Portable across platforms
+* Strong programming foundation
+* Widely used in industry
+
+---
+
+## Summary
+
+C is one of the most important programming languages and serves as the foundation for learning advanced languages such as C++ and Python. It helps develop programming logic, understanding of memory, and problem-solving skills, making it an ideal starting language for this course.
+
+---
+
+## Practice Questions
+
+1. Who developed the C programming language?
+2. Why is C called a middle-level language?
+3. List four applications of C.
+4. What is the purpose of the main() function?
+5. What is the purpose of printf()?
+
+End of Module 1 – Introduction to C Programming
