@@ -1,0 +1,25 @@
+Introduction of C++
+----------------------------------------
+*Programming Language--- is a computer language that is used by programmer to communicate with computer
+it is set of instruction written in specific language like c ,java c++ etc
+
+*What is C++---high level language language,
+
+use in --
+software development
+Real time system
+game development
+
+
+why do we need it--
+
+performance
+OOPS
+Control over system resources and memory
+
+*Compilation process--- source code convert in to machine understable execute file that computer understand 
+
+step in compilation---
+preprocessing
+compilation
+assembly & linking
