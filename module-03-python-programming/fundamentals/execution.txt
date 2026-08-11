@@ -1,0 +1,37 @@
+# 1. python code is executed by python interpreter.
+
+Python program (.py)
+       ↓
+Python interpreter
+       ↓
+Computer
+       ↓
+Output
+
+
+
+2. Print()----
+displays information on the screen.
+
+Why?
+
+We need output to:
+
+Display results
+Show messages
+Debug programs
+Display calculation
+
+3. Comments(#)
+What?
+
+Comments are notes in the source code that Python does not execute.
+
+Why?
+
+Comments make code easier to:
+
+Understand
+Maintain
+Debug
+Explain to other programmers
