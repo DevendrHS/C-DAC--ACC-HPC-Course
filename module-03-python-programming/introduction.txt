@@ -1,0 +1,340 @@
+============================================================
+        ACC-HPC COURSE
+        MODULE 03 - PYTHON PROGRAMMING
+============================================================
+
+TOPIC: INTRODUCTION TO PYTHON IN HIGH PERFORMANCE COMPUTING
+
+------------------------------------------------------------
+1. WHAT IS PYTHON?
+------------------------------------------------------------
+
+Python is a high-level, general-purpose programming language.
+It was created by Guido van Rossum and was first released in
+1991.
+
+Python is known for:
+
+- Simple and readable syntax
+- Easy to learn
+- Large number of libraries
+- Rapid development
+- Automation and scripting
+- Scientific and numerical computing
+
+Example:
+
+print("Hello, World!")
+
+
+------------------------------------------------------------
+2. WHY PYTHON IS USED IN HPC
+------------------------------------------------------------
+
+HPC stands for High Performance Computing.
+
+HPC is used to solve large and complex computational problems
+using powerful computers, multiple CPUs, GPUs, memory and
+parallel processing.
+
+Python is useful in HPC mainly because it makes it easier to:
+
+- Prepare and process data
+- Automate tasks
+- Run experiments
+- Manage HPC workflows
+- Analyze results
+- Create visualizations
+- Work with scientific libraries
+- Control and interact with HPC programs
+
+
+------------------------------------------------------------
+3. PYTHON vs C/C++ IN HPC
+------------------------------------------------------------
+
+C and C++ are generally preferred when maximum computational
+performance and low-level control are required.
+
+Python is generally preferred when simplicity, rapid development,
+automation and data processing are important.
+
+C/C++:
+- High performance
+- Low-level memory control
+- Suitable for performance-critical code
+- Used for computational kernels
+
+Python:
+- Easy and readable
+- Faster development
+- Good for scripting and automation
+- Good for data processing
+- Large scientific ecosystem
+
+
+------------------------------------------------------------
+4. PYTHON DOES NOT REPLACE C/C++ IN HPC
+------------------------------------------------------------
+
+Python is generally slower than C/C++ for CPU-intensive
+operations.
+
+However, Python can work together with high-performance
+libraries and compiled languages.
+
+A common workflow is:
+
+Python
+   |
+   v
+Scientific/Optimized Libraries
+   |
+   v
+Compiled Code
+   |
+   v
+CPU / GPU / HPC Cluster
+
+
+For example, NumPy provides Python interfaces to highly
+optimized numerical operations.
+
+Therefore, Python provides an easy interface while
+performance-critical work can be handled by optimized
+compiled code.
+
+
+------------------------------------------------------------
+5. IMPORTANT PYTHON LIBRARIES FOR HPC
+------------------------------------------------------------
+
+Some important libraries are:
+
+1. NumPy
+   Used for numerical and array-based computation.
+
+2. SciPy
+   Used for scientific and mathematical computing.
+
+3. Pandas
+   Used for data processing and analysis.
+
+4. Matplotlib
+   Used for creating graphs and visualizations.
+
+5. mpi4py
+   Provides Python bindings for MPI and can be used for
+   distributed-memory parallel programming.
+
+6. Numba
+   Can be used to accelerate selected Python numerical
+   functions using JIT compilation.
+
+
+------------------------------------------------------------
+6. PYTHON IN AN HPC WORKFLOW
+------------------------------------------------------------
+
+Python can be used at different stages of an HPC workflow.
+
+Example:
+
+Step 1:
+Prepare input data
+
+        |
+        v
+
+Step 2:
+Create experiment parameters
+
+        |
+        v
+
+Step 3:
+Submit jobs to an HPC cluster
+
+        |
+        v
+
+Step 4:
+Run high-performance computation
+
+        |
+        v
+
+Step 5:
+Collect results
+
+        |
+        v
+
+Step 6:
+Analyze the results using Python
+
+        |
+        v
+
+Step 7:
+Generate graphs and reports
+
+
+------------------------------------------------------------
+7. EXAMPLE OF PYTHON FOR DATA PROCESSING
+------------------------------------------------------------
+
+Example:
+
+numbers = [10, 20, 30, 40, 50]
+
+total = sum(numbers)
+
+print(total)
+
+Output:
+
+150
+
+This simple example shows how Python can be used to process
+data easily.
+
+
+------------------------------------------------------------
+8. PYTHON AND PARALLEL COMPUTING
+------------------------------------------------------------
+
+HPC often uses parallel computing.
+
+Parallel computing means dividing a large problem into smaller
+tasks that can be processed simultaneously.
+
+Python can interact with parallel computing technologies
+through libraries and frameworks.
+
+Examples:
+
+- mpi4py for MPI
+- multiprocessing
+- concurrent.futures
+- NumPy-based numerical workloads
+- GPU computing libraries/frameworks
+
+
+------------------------------------------------------------
+9. ADVANTAGES OF PYTHON IN HPC
+------------------------------------------------------------
+
+1. Easy to learn
+2. Simple syntax
+3. Rapid development
+4. Large ecosystem
+5. Excellent scientific libraries
+6. Useful for automation
+7. Good for data analysis
+8. Useful for experiment management
+9. Can work with C/C++ and other compiled languages
+10. Useful for HPC workflow management
+
+
+------------------------------------------------------------
+10. LIMITATIONS OF PYTHON IN HPC
+------------------------------------------------------------
+
+1. Python is generally slower than C/C++ for raw CPU-intensive
+   code.
+
+2. Python's interpreter overhead can matter in tight loops.
+
+3. Memory usage can be higher than lower-level languages for
+   some workloads.
+
+4. Performance-critical sections may need optimized libraries,
+   native extensions, JIT compilation, or another compiled
+   language.
+
+
+------------------------------------------------------------
+11. C/C++ AND PYTHON TOGETHER
+------------------------------------------------------------
+
+In HPC, we do not have to choose only one language.
+
+A practical approach is:
+
+Python:
+- Workflow
+- Automation
+- Data preparation
+- Experiment control
+- Result analysis
+
+C/C++:
+- Performance-critical computation
+- Low-level optimization
+- Computational kernels
+
+
+Example:
+
+Python
+   |
+   +---- Prepare data
+   |
+   +---- Start computation
+   |
+   v
+C/C++ optimized code
+   |
+   v
+HPC CPU/GPU
+   |
+   v
+Results
+   |
+   v
+Python
+   |
+   +---- Analyze
+   |
+   +---- Visualize
+
+
+------------------------------------------------------------
+12. KEY POINTS TO REMEMBER
+------------------------------------------------------------
+
+- Python is a high-level programming language.
+- HPC means High Performance Computing.
+- Python is widely useful for scientific computing and HPC
+  workflows.
+- Python is generally not used for maximum raw CPU performance
+  when compared with optimized C/C++ code.
+- Python is excellent for automation, data processing,
+  experimentation and visualization.
+- Libraries such as NumPy, SciPy and mpi4py extend Python's
+  usefulness for scientific and HPC applications.
+- Python can work together with C/C++ instead of replacing them.
+
+
+------------------------------------------------------------
+13. COURSE GOAL
+------------------------------------------------------------
+
+The goal of learning Python in this ACC-HPC course is not only
+to learn Python syntax.
+
+The goal is to learn how Python can be used for:
+
+- Scientific computing
+- Numerical computation
+- Data processing
+- Automation
+- HPC workflows
+- Parallel and distributed computing concepts
+- Analysis and visualization of computational results
+
+
+============================================================
+END OF INTRODUCTION
+============================================================
