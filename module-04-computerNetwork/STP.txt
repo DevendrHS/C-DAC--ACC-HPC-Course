@@ -1,0 +1,70 @@
+STP----Spinning Tree protocol----
+
+       
+        
+       PC1
+        |
+PC2 ---[ SWITCH ]--- PC4
+        |
+       PC3
+
+
+
+
+if  switch get failed then no communication betw all PCs 
+
+
+
+             ┌─────────────┐
+             │   SWITCH 1  │
+             └──────┬──────┘
+                ↙         ↘
+              ↙             ↘
+      ┌─────────────┐   ┌─────────────┐
+pc1 - │   SWITCH 2  │───│   SWITCH 3  │----------pc3
+      └─────────────┘   └─────────────┘
+              ↑             ↓
+              └─────────────┘
+                  LOOP
+
+
+
+
+                  STP----steps
+1. it send BPDU Packet send to every one
+  it contain BridgeID of Switch
+  BridgeID--VLAN + PRIORITY number + MAC address
+        
+        bydefault--VLAN1 and priority number is same for all 
+        but mac adddress is always different to each other
+
+
+  lower mac address will be declaired as root Bridge
+  step 2-- designated port  is elected by cost of path 
+where cost is less that is declared as  designated port
+
+ step 3 . the port which is not elected will be declared as blocked port          
+
+
+ 5 state of STP  ---
+
+ 1. blocked---it detect broadcast storm
+ 2. listening--BpDU packet are sent
+ 3. learning--learning the packet
+ 4. forwarding--forwarding the packet
+ 5.Disable  --- work is done and Disable      
+
+
+ type of STP---
+
+ PVST---Per VLAN spanning tree protocol
+
+ it is cisco property
+
+ work in VlAN also....
+
+
+
+
+ VxLAN----Virtual extensible local area network--24 bits
+    doesnot depend upon geographical area of device
