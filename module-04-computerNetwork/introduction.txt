@@ -1,0 +1,258 @@
+COMPUTER NETWORKS — GENERAL SYLLABUS NOTES
+
+1. COMPUTER NETWORK FUNDAMENTALS
+- What is a computer network?
+- Network components
+- Network types: PAN, LAN, MAN, WAN
+- Network topologies: Bus, Star, Ring, Mesh, Hybrid
+- Network architecture
+- Client-server model
+- Peer-to-peer model
+- Protocols and standards
+- Network performance: Bandwidth, Throughput, Latency, Delay, Jitter, Packet loss
+
+2. NETWORK MODELS
+OSI Model:
+1. Physical
+2. Data Link
+3. Network
+4. Transport
+5. Session
+6. Presentation
+7. Application
+
+- Responsibilities of each layer
+- Protocols
+- Devices
+- Data units
+- Addressing
+- TCP/IP Model
+- OSI vs TCP/IP
+
+3. PHYSICAL LAYER
+- Analog and digital signals
+- Transmission media: Twisted pair, Coaxial cable, Fiber optic, Wireless
+- Bandwidth
+- Bit rate
+- Baud rate
+- Nyquist theorem
+- Shannon capacity
+- Multiplexing: FDM, TDM, WDM
+- Switching: Circuit, Packet, Message switching
+
+4. DATA LINK LAYER
+Framing:
+- Character count
+- Byte stuffing
+- Bit stuffing
+
+Error Detection:
+- Parity
+- Checksum
+- CRC
+
+Error Correction:
+- Hamming distance
+- Hamming code
+
+Flow Control:
+- Stop-and-Wait
+- Sliding Window
+
+ARQ:
+- Stop-and-Wait ARQ
+- Go-Back-N
+- Selective Repeat
+
+5. MAC / MEDIUM ACCESS CONTROL
+Random Access:
+- ALOHA
+- Slotted ALOHA
+- CSMA
+- CSMA/CD
+- CSMA/CA
+
+Ethernet:
+- Ethernet frame
+- MAC address
+- Ethernet operation
+- Switches
+- Collision domain
+- Broadcast domain
+- VLAN basics
+
+Other concepts:
+- MAC address
+- ARP
+- Ethernet switching
+
+6. NETWORK LAYER
+IP Addressing:
+- IPv4
+- IPv6
+- Network address
+- Host address
+- Subnet mask
+- Default gateway
+
+Subnetting:
+- Subnetting
+- CIDR
+- VLSM
+- Supernetting
+- Route aggregation
+
+IPv4:
+- IPv4 header
+- Fragmentation
+- MTU
+- TTL
+- ICMP
+
+NAT:
+- Static NAT
+- Dynamic NAT
+- PAT/NAT overload
+
+7. ROUTING
+Routing concepts:
+- Routing table
+- Static routing
+- Dynamic routing
+
+Distance Vector:
+- Bellman-Ford concept
+- RIP
+- Count-to-infinity problem
+- Split horizon
+
+Link State:
+- Dijkstra's algorithm
+- OSPF
+- Link-state database
+
+Other routing:
+- BGP
+- Path-vector concept
+
+8. TRANSPORT LAYER
+UDP:
+- Connectionless communication
+- UDP header
+- Advantages and disadvantages
+
+TCP:
+- Connection-oriented communication
+- TCP header
+- Sequence number
+- Acknowledgement number
+- Ports
+
+TCP Connection:
+- Three-way handshake: SYN, SYN+ACK, ACK
+
+TCP Termination:
+- FIN
+- ACK
+- Four-way termination
+
+9. TCP FLOW AND CONGESTION CONTROL
+Flow Control:
+- Purpose: prevent the sender from overwhelming the receiver
+- Receive window
+- Sliding window
+- Window size
+
+Congestion Control:
+- Purpose: prevent network overload
+- Slow Start
+- Congestion Avoidance
+- Fast Retransmit
+- Fast Recovery
+- Congestion Window (cwnd)
+- Receiver Window (rwnd)
+
+10. APPLICATION LAYER
+DNS:
+- Domain names
+- DNS hierarchy
+- DNS resolution
+- DNS records
+
+HTTP/HTTPS:
+- HTTP request
+- HTTP response
+- HTTP methods
+- Status codes
+- HTTPS
+- TLS basics
+
+Email:
+- SMTP
+- POP3
+- IMAP
+
+File Transfer:
+- FTP
+- TFTP
+
+Remote Access:
+- SSH
+- Telnet
+
+DHCP:
+- Dynamic IP assignment
+- DHCP process
+
+11. NETWORK SECURITY BASICS
+- CIA triad
+- Authentication
+- Authorization
+- Encryption
+- Symmetric encryption
+- Asymmetric encryption
+- Hashing
+- Digital signatures
+- Certificates
+- TLS/SSL
+- Firewall
+- VPN
+- IDS
+- IPS
+
+12. NETWORK DEVICES
+- Hub: broadcasts data to all ports
+- Switch: forwards frames using MAC addresses
+- Router: forwards packets using IP addresses
+- Bridge: connects LAN segments
+- Repeater: regenerates signals
+- Gateway: connects different networks/protocol environments
+- Access Point: provides wireless network access
+
+13. IMPORTANT ALGORITHMS
+- CRC
+- Hamming Code
+- Stop-and-Wait
+- Sliding Window
+- Go-Back-N
+- Selective Repeat
+- Dijkstra
+- Bellman-Ford
+
+14. INTERCONNECTS — HPC CONTEXT
+- Network interconnects
+- Network topology
+- Point-to-point communication
+- Switch-based interconnects
+- Latency
+- Bandwidth
+- Network throughput
+- Scalability
+- High-speed interconnect concepts
+- Cluster networking
+- Communication between compute nodes
+
+RECOMMENDED STUDY ORDER
+Fundamentals -> OSI/TCP-IP -> Physical -> Data Link -> MAC/Ethernet ->
+IP/Subnetting -> Routing -> TCP/UDP -> Flow/Congestion Control ->
+Application Layer -> Security -> Interconnects
