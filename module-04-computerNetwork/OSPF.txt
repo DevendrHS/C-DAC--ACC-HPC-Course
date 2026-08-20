@@ -1,0 +1,119 @@
+OSPF--open shortest path first
+
+. its a link state protocol.
+.Administrative Distance-- value 110
+. it support VLSM  and CIDR 
+.hello timer / update timer/ 0 second
+. dead timer --40 sec
+. it bring Area OSPF concept.
+.it support unlimited hop count
+
+
+
+
+STAGES OF OSPF:-
+1)DOWNSTATE->PROCESS IS NOT STANDARD. HELLO PACKET NOT sent
+2)initial state->hello packet sent .no neighbour table has been  creates.
+3)two way state ->bi directional communication started  and neighbour 
+4. exstart-- both router chech rouder id whose is greter then it  will first dend
+5. exchange--both router send data each other (data is shared between them is LSD link state dadtabase)
+
+    3 table are in there ---
+    Neighbour table--- has information /hello packet of their router
+    Routing-- all the possible path reach destination
+    database-- summary of information of other router
+
+    6. load state--both router compare summary and if tranfer some extra data then they send
+     link state request to other request and other router gives link state update to the router
+
+     7. full state--both router have complete database of each other and communication is success full
+
+
+     link State protocol---OSPF/IS-IS[Interior Gateway Protocol]
+
+     . shorttest path algo first
+     .djisiktra algorathim
+
+
+     IS-IS----
+     .link service protocol
+     .Shortest path first
+     .Dijis---algo
+
+
+     Autonomous System----it tell in a network how many routers and device and how they are connected 
+     to each other  If
+     thehy are having same routing protocol and domain then they are in same Autonomous systems
+
+     LSP work under same Autonomous systems.
+
+
+     BGP---Border gateway protocol----(1. iBGP  2. eBGP)--internal and external
+
+     .it work on different AS 
+     .it work on distance path vector
+
+
+     Discovery Protocol---(CDP)----
+     IT TELLS About the details of other connected devices in the network.
+     a.OS version
+     b.management ports
+     c.Ip address
+     d.Device compatibility
+     e. port open
+     CDP--
+     ->only for cisco devices
+    -> cdp run ->to configure
+    . show only cdp neighbour details
+
+LLDP--
+all vendor devices
+lldp run --to configure
+show neighbour details
+
+
+Switching----
+
+VLAN---virtual  local area network---
+.logical addressing of switch
+.improves Security
+.cost-effective
+.traffic management
+
+NOTE**--VLAN can be done in samee network ,it cant br there outside the network 
+limit up to 4000 only-
+
+                    ┌──────────────────────┐
+                    │       SWITCH         │
+                    │                      │
+                    │   VLAN 10 | VLAN 20  │
+                    │           |          │
+                    └─────┬─────┴────┬─────┘
+                          │          │
+                    ┌─────┘          └─────┐
+                    │                      │
+                 VLAN 10                VLAN 20
+                (Students)              (Faculty)
+                    │                      │
+              ┌─────┴─────┐          ┌─────┴─────┐
+              │           │          │           │
+             PC1         PC2        PC3         PC4
+              │           │          │           │
+            10.0.0.1    10.0.0.2   20.0.0.1    20.0.0.2
+
+
+            type of VLAN--
+            1.single VLAN--switchport use access mode 
+            2. multi VLAN-- switch port trunk mode 
+
+            Native VLAN --by default VLAN1 is there in all Switches
+
+            VLAN tagging(Dot1Q)
+
+            if switch1 ,PC1 want to communicate with switch 2 Pc 4 then pc1 will add VLAN
+            Tag into that VLAN  id  and send it to switch 1 
+
+            
+
+
+
