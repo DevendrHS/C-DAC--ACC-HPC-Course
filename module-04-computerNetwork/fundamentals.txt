@@ -1,0 +1,530 @@
+Computer Networks — Fundamentals
+
+Let's start with the first section of CN: Computer Network Fundamentals.
+
+1. What is a Computer Network?
+
+A computer network is a collection of two or more computing devices connected together so that they can communicate and share resources.
+
+Examples of shared resources:
+
+Files
+Printers
+Applications
+Internet connection
+Data
+Hardware resources
+Simple example
+
+Suppose three computers are connected:
+
+Computer A ─────┐
+                │
+Computer B ─────┼──── Network
+                │
+Computer C ─────┘
+
+They can communicate and exchange data through the network.
+
+2. Why Do We Need Computer Networks?
+
+The major purposes are:
+
+1. Resource Sharing
+
+Multiple computers can use the same resource.
+
+Example:
+
+PC1 ───┐
+PC2 ───┼──► Shared Printer
+PC3 ───┘
+2. Data Sharing
+
+Users can exchange files and information.
+
+3. Communication
+
+Examples:
+
+Email
+Video calls
+Messaging
+VoIP
+4. Remote Access
+
+A user can access resources located on another computer/network.
+
+5. Centralized Management
+
+Organizations can centrally manage:
+
+Users
+Files
+Security
+Applications
+3. Basic Components of a Network
+
+A basic network consists of several important components.
+
+End Devices
+
+These are devices that actually send or receive data.
+
+Examples:
+
+Computer
+Laptop
+Smartphone
+Server
+Printer
+IoT device
+
+They are also called hosts or end systems.
+
+4. Network Interface Card — NIC
+
+A Network Interface Card (NIC) allows a device to connect to a network.
+
+Example:
+
+Computer
+   │
+   ▼
+  NIC
+   │
+   ▼
+Network
+
+A NIC can provide:
+
+Ethernet connection
+Wi-Fi connection
+
+A NIC generally has a MAC address, which identifies the network interface at the Data Link Layer.
+
+5. Networking Devices
+
+Some important networking devices are:
+
+Hub
+
+A hub receives data and sends it to all connected ports.
+
+        PC1
+         │
+PC2 ─── Hub ─── PC3
+         │
+        PC4
+
+If PC1 sends data, the hub broadcasts it to the other ports.
+
+Switch
+
+A switch forwards Ethernet frames based on MAC addresses.
+
+PC1 ──┐
+PC2 ──┼── Switch ── Server
+PC3 ──┘
+
+A switch is generally more efficient than a hub.
+
+Router
+
+A router connects different networks and forwards packets using IP addresses.
+
+LAN 1 ─── Router ─── LAN 2
+
+For example:
+
+Home Network
+     │
+     ▼
+  Router
+     │
+     ▼
+  Internet
+6. Network Types
+
+Networks can be classified according to their geographical coverage.
+
+PAN — Personal Area Network
+
+A small network around an individual.
+
+Example:
+
+Phone ─── Bluetooth ─── Earbuds
+
+Range is generally very small.
+
+LAN — Local Area Network
+
+Covers a relatively small geographical area.
+
+Examples:
+
+Home
+Office
+Computer laboratory
+School building
+PC1 ──┐
+PC2 ──┼── Switch
+PC3 ──┘
+
+LAN generally provides high speed and is privately managed.
+
+MAN — Metropolitan Area Network
+
+Covers a larger geographical area such as a city or metropolitan region.
+
+Conceptually:
+
+Building A ──┐
+Building B ──┼── Metropolitan Network
+Building C ──┘
+WAN — Wide Area Network
+
+Covers a large geographical area.
+
+Examples:
+
+Country
+Continent
+Multiple countries
+
+The Internet is the most well-known example of a global interconnected network.
+
+PAN vs LAN vs MAN vs WAN
+Network	Typical coverage
+PAN	Personal/small area
+LAN	Building/local area
+MAN	City/metropolitan area
+WAN	Large geographical area
+7. Network Topology
+
+Topology describes how devices are arranged and connected in a network.
+
+There are two broad types:
+
+Physical Topology
+
+Describes the actual physical arrangement of devices and cables.
+
+Logical Topology
+
+Describes how data logically flows through the network.
+
+8. Bus Topology
+
+All devices share a common communication medium.
+
+PC1 ── PC2 ── PC3 ── PC4
+       Common Bus
+Advantages
+Simple
+Requires less cable
+Disadvantages
+Failure of the main cable can affect the network
+Difficult to troubleshoot
+Performance decreases as network traffic increases
+9. Star Topology
+
+Every device connects to a central device, usually a switch.
+
+        PC1
+         │
+         │
+PC2 ── Switch ── PC3
+         │
+         │
+        PC4
+Advantages
+Easy to manage
+Easy to troubleshoot
+Failure of one cable normally affects only one device
+Easy to add devices
+Disadvantage
+
+If the central switch fails, connected devices lose network connectivity.
+
+10. Ring Topology
+
+Each device is connected to two neighboring devices.
+
+       PC1
+      /   \
+    PC2   PC4
+      \   /
+       PC3
+
+Data can travel around the ring.
+
+11. Mesh Topology
+
+Devices have multiple interconnections.
+
+Full Mesh
+
+Every device connects directly to every other device.
+
+For n devices:
+
+Number of links=
+2
+n(n−1)
+	​
+
+
+For example, with 4 devices:
+
+2
+4(4−1)
+	​
+
+=6
+
+So a full mesh of 4 devices requires 6 links.
+
+Advantages
+High redundancy
+Good fault tolerance
+Disadvantage
+Expensive
+Complex to install and maintain
+12. Hybrid Topology
+
+A combination of two or more topologies.
+
+Example:
+
+Star + Bus
+
+Large networks often use combinations of different topologies.
+
+13. Protocol
+
+A protocol is a set of rules that controls communication between network devices.
+
+Think of it as a common language and set of rules.
+
+For successful communication, devices need to agree on things such as:
+
+How data is formatted
+How data is transmitted
+How errors are handled
+How devices identify each other
+
+Examples:
+
+HTTP
+TCP
+IP
+Ethernet
+DNS
+DHCP
+14. Client-Server Model
+
+In the client-server model, a client requests a service and a server provides that service.
+
+Client 1 ──┐
+Client 2 ──┼──► Server
+Client 3 ──┘
+
+Example:
+
+When you open a website:
+
+Browser (Client)
+       │
+       │ Request
+       ▼
+Web Server
+       │
+       │ Response
+       ▼
+Browser
+Client
+
+Requests a service.
+
+Server
+
+Provides a service.
+
+15. Peer-to-Peer — P2P
+
+In a P2P network, devices can communicate directly and may act as both clients and servers.
+
+PC1 ◄────► PC2
+ ▲          ▲
+ │          │
+ └────► PC3
+
+There is no requirement for one centralized server to provide every service.
+
+16. Bandwidth
+
+Bandwidth refers to the maximum data-carrying capacity of a communication link.
+
+Usually measured in:
+
+bits per second (bps)
+Kbps
+Mbps
+Gbps
+
+Example:
+
+Link capacity = 1 Gbps
+
+means the link has a nominal capacity of 1 gigabit per second.
+
+Important
+
+Bandwidth ≠ actual data transfer rate.
+
+Actual performance can be affected by:
+
+Network congestion
+Protocol overhead
+Hardware
+Latency
+Packet loss
+17. Throughput
+
+Throughput is the actual rate at which data is successfully delivered.
+
+Example:
+
+Bandwidth = 1 Gbps
+Actual throughput = 700 Mbps
+
+So:
+
+Bandwidth = theoretical/maximum capacity
+
+Throughput = actual achieved data rate
+
+18. Latency
+
+Latency is the time required for data to travel from source to destination.
+
+It is commonly measured in:
+
+milliseconds (ms)
+
+Lower latency generally means faster communication response.
+
+Example:
+
+Computer A ─────────────► Server
+             20 ms
+19. Delay
+
+Network communication can experience different types of delay.
+
+Important types include:
+
+Processing Delay
+
+Time required by a device to process a packet.
+
+Queuing Delay
+
+Time a packet waits in a queue before transmission.
+
+Transmission Delay
+
+Time required to put all bits of a packet onto the transmission link.
+
+d
+trans
+	​
+
+=
+R
+L
+	​
+
+
+where:
+
+L = packet length in bits
+R = transmission rate in bits/second
+Propagation Delay
+
+Time required for the signal to physically travel through the medium.
+
+d
+prop
+	​
+
+=
+s
+d
+	​
+
+
+where:
+
+d = distance
+s = propagation speed
+20. Jitter
+
+Jitter is the variation in packet delay.
+
+Example:
+
+Packet 1 → 10 ms
+Packet 2 → 12 ms
+Packet 3 → 30 ms
+Packet 4 → 15 ms
+
+The varying delay is jitter.
+
+Jitter is particularly important for:
+
+Voice calls
+Video conferencing
+Real-time applications
+21. Packet Loss
+
+Sometimes packets fail to reach the destination.
+
+Possible causes:
+
+Network congestion
+Hardware failure
+Transmission errors
+Buffer overflow
+
+Example:
+
+Packet 1 ─────────► ✓
+Packet 2 ─────────► ✓
+Packet 3 ─────────► ✗
+Packet 4 ─────────► ✓
+
+Packet loss can reduce network performance.
+
+22. Important Terms — Quick Revision
+Term	Meaning
+Network	Connected devices communicating with each other
+Host	Device connected to a network
+NIC	Network interface used to connect a device
+Protocol	Rules governing communication
+LAN	Local Area Network
+WAN	Wide Area Network
+Switch	Forwards frames using MAC addresses
+Router	Forwards packets between networks using IP
+Bandwidth	Maximum capacity of a link
+Throughput	Actual achieved data rate
+Latency	Time taken for communication
+Jitter	Variation in packet delay
+Packet loss	Packets that fail to reach destination
+The most important concepts to master first
+
+For your CN preparation, make sure you can explain these without memorizing definitions:
+
+Network → Protocol → Host → NIC → LAN/WAN → Topology → Switch → Router → Bandwidth → Throughput → Latency → Delay → Jitter → Packet Loss.
