@@ -1,0 +1,60 @@
+switch>enable
+configure terminal
+vlan2
+name hr
+exit
+
+vlan 3
+name software
+exit
+interface fastEthernet 0/1
+switchport acccess vlan2 
+exit
+interface fastEththernet 0/2
+switchport access vlan 2
+exit
+
+interface fastEththernet 0/3
+switchport access vlan 3
+exit
+interface fastEththernet 0/4
+switchport access vlan 3
+exit
+
+
+                              Task---
+ 1.configure static routing-----
+
+      (+)-----------------------------------(+)                             
+       |                                     |  
+       [sw1]
+       /\                                 [sw2]
+[pc1]   [pc2]                              /\
+                                      [pc3]  [pc4]
+
+ 
+  question pc1 -----pc4 should be ping?       
+
+
+  2. multiple VLAN 
+
+
+  [Sw1]------------------------------[Sw2]  
+  //\\                                 //\\                                                    
+
+
+
+                    RAID---Redundant array of independent Disk
+                        ---It's a system /technology where multiple HDD/SDD are combined to
+                             make storage so that data cant be lost.
+                             Types of RAID:RAID 0,RAID 1,RAID 5,RAID 6,RAID 10
+                             i)RAID 1:Mirroring and Duplexing
+                                     :Requires 2 Disk
+                                     Data :A,B,C,D
+                                     Disk 1     Disk 2
+                                       A          A
+                                       B          B
+                                       C          C
+                                       D          D
+                            ii)RAID 0:partitioning
+                                     :Require 2 Disk
