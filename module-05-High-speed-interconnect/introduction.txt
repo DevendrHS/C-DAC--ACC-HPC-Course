@@ -1,0 +1,67 @@
+High-Speed Interconnects — Notes
+
+1. Networks, Interconnects and High-Speed Interconnect Fabrics
+What is a network?
+What is an interconnect?
+What is a high-speed interconnect fabric?
+Difference between a general network and an HPC interconnect
+2. Why HPC Requires Specialized Networks
+Why HPC systems need high-performance communication
+Bandwidth
+Latency
+Throughput
+Packets
+Effect of these factors on HPC performance
+
+3. Applications of High-Speed Interconnects
+Where high-speed interconnects are used
+Who uses high-speed interconnects
+Role of interconnects in HPC environments
+4. Omni-Path
+Basic architecture
+Components
+Software stack
+Protocol layers
+Packet structure
+Routing
+Payload
+Flow control
+Integrity
+Quality of Service (QoS)
+Scalability
+
+5. InfiniBand
+InfiniBand architecture
+Host Channel Adapter (HCA)
+InfiniBand switches
+Subnet Manager
+Queue Pairs (QP)
+Remote Direct Memory Access (RDMA)
+
+Protocol layers
+6. InfiniBand Packet Structure
+
+Understand the purpose and position of:
+
+┌─────┬─────┬─────┬─────────┬──────┬──────┐
+│ LRH │ GRH │ BTH │ Payload │ ICRC │ VCRC │
+└─────┴─────┴─────┴─────────┴──────┴──────┘
+LRH — Local Route Header
+GRH — Global Route Header
+BTH — Base Transport Header
+Payload
+ICRC — Invariant CRC
+VCRC — Variant CRC
+7. Omni-Path vs InfiniBand
+
+Compare:
+
+Similarities
+Differences
+Architecture
+Communication mechanisms
+Packet structure
+Performance considerations
+Practical selection considerations
+
+This is the study outline based on the learning objectives you supplied. If you upload the module's PPT/PDF, I can turn the actual lecture material into complete exam-ready English notes, preserving the terminology used by your instructor.
