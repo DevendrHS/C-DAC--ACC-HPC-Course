@@ -1,0 +1,35 @@
+   ETHER CHANNEL(cisco property)/PORT CHANNEL(IEEE)-----------
+
+   ----------------------------------------------------------------------------------
+   its a  technology to combine multiple ethernet link to make on elogical/virtual link
+
+   .maximum 8 physical link can be combined
+
+         
+   .pc1---1000 mbps-------->switch1--------100 mbps------------switch2<-------1000mbps--------pc2
+
+
+   advantage
+   cost effective
+   .bandwiidth
+   .traffic management
+   .load balancing
+
+protocols----
+1.PAgP--Port aggrestion protocols
+  .its a cisco protocols
+  .4 mode work here  
+
+  on--etherchannet connect with interface
+  off--etherchaneel not configured
+  Desirable--one interface will become etherchannel when become in contact with other etherchannel interface
+
+  Auto--one interface will become etherchannel only when interface will ask /tell them to leave
+
+
+
+  2. LACP---link aggregation protocols(IEEE)
+.on
+.off
+.Active
+.Passive
