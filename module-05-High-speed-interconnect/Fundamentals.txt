@@ -1,0 +1,32 @@
+What is a network ?
+
+--it is acommunication system in which computers or devices exchange data over link
+using rules and addressing
+
+*a network connect device ---->
+a highspeed interconnect-----
+.network optimize for extremely factors
+.low -delay data movement
+
+
+What is Interconnect---
+
+a Communication system connecting compute,memory,storage,accelerator, and network devices
+i.e combination make high performance  interconnect
+
+. designed to minimize Latency
+.reduce cpu involvement
+.reduce communication overhead
+
+What is high-speed interconnect?
+
+a high-speed interconnect connect computers,storage memory,processors ,accelators ,
+so they can exchange data very quickly with very low delay
+
+Note** --computer do computing,the high-speed interconnect move data between them quickly
+
+Normal network--think of normal road where traffic management is not there
+fabric high-speed--think of high speed railway--fas low latency(purpose -built data movement)
+large HPC fabric--dedicated transportation network--interconnecting many compute and storage endpoint
+
+
