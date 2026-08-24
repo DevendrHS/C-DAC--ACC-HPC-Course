@@ -1,0 +1,18 @@
+Introduction of Omini-Path---
+
+This is an HPC oriented high-performance fabric architecture
+
+Historic positioning---
+.intel Omini-path Archi.(OPA) was designed as high performance fabric technology
+and particularly associated with HPC cluster,supercomputing
+.intel base systems.
+.large scale parallel Applications
+
+note **--omini path designed as an ed-to end fabric concept---
+host interface ,switches link/cable,management software and application facing communication software working together.
+
+OMNI-PATH
+.high Bandwidth
+.Scalability
+.efficient communication
+.HPC Oriented networking
