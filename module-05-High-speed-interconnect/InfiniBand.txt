@@ -1,0 +1,26 @@
+InfiniBand architecture & Packet Structure-----
+(a widely used high performance switch fabric with HCAs,subnetmanagement,Queue pairs,RDMA, and Structurepair header)
+
+
+Introduction to InfiniBand--
+a high-performance switch fabric rchitecture
+
+INFINIBAND---
+.HPC
+.Server
+.storage
+.data ceneters
+.low latency communication
+
+Note**-- InfiniBand combines a switched fabric, specialized host adapters, transport semantics, and RDMA-oriented communication
+
+why InfiiniBand?---
+
+.Very low latency
+.High bandwidth
+.High message rate
+.Scalable topology
+.Remote Direct Memory Access (RDMA)
+.Kernel bypass
+.Hardware-based communication processing
+
