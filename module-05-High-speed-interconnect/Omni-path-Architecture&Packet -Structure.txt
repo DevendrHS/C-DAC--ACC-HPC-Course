@@ -16,3 +16,15 @@ OMNI-PATH
 .Scalability
 .efficient communication
 .HPC Oriented networking
+
+
+omni-path current context---
+2015--intel bring omini in the market
+2020--intel ceases development and the tech /IP move to the cornelis network spinout
+2025-- cornelis launches CN500 Omini-path for AI &HPC scale out networking
+2026--omini-pth selected for LLNL'S lynux supercomputer development,showing continue HPC use
+
+
+Omini-Path basic concept---
+
+fabric connecting compute node through host interface and switches
