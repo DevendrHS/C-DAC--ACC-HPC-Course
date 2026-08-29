@@ -1,0 +1,172 @@
+                      LINUX FUNDAMENTALS----
+what is an operating system?
+--manage communication between hardware and software
+
+
+we are use application but cant directly access or control CPU,RAM,DISK,KEYBOARD ,GPU 
+so OS manage communication between software and hardware
+
+
+
+
+
+
+--linux is a Kernel
+kernel is a core part of an operating system--
+
+
+A complete system usually contains:
+
+Hardware
+   ↓
+Linux Kernel
+   ↓
+Operating System Services
+   ↓
+Shell
+   ↓
+Applications
+   ↓
+User
+
+example 1.-----------
+
+You type ls
+   ↓
+Shell understands the command
+   ↓
+Finds the ls program
+   ↓
+Linux kernel provides access to the filesystem
+   ↓
+Directory information is returned
+   ↓
+Output appears on your terminal
+
+
+note**
+The Linux kernel controls:
+
+CPU--
+Which program gets CPU time?
+
+Memory--
+How much RAM does each program get?
+
+Files--
+Who can read or modify a file?
+
+Network--
+How does your computer communicate with another machine?
+
+Processes--
+How are programs started and stopped?
+
+Devices--
+How do software programs communicate with hardware?
+
+
+Why is Linux important for you?------
+
+For your goals, Linux is extremely important.
+
+You are studying HPC, and most HPC environments use Linux-based systems.
+
+An HPC environment looks conceptually like:
+
+Your Laptop
+     │
+     │ SSH
+     ▼
+┌──────────────┐
+│  Login Node  │
+└──────┬───────┘
+       │
+       │ Submit Job
+       ▼
+┌──────────────────────┐
+│     HPC Cluster      │
+│                      │
+│ Compute Node 1       │
+│ Compute Node 2       │
+│ Compute Node 3       │
+│ Compute Node 4       │
+│                      │
+│ CPU / GPU Resources  │
+└──────────────────────┘
+
+You will use Linux to:
+
+Login to cluster
+        ↓
+Transfer files
+        ↓
+Compile programs
+        ↓
+Run Python/C/C++
+        ↓
+Submit SLURM jobs
+        ↓
+Monitor CPU/GPU
+        ↓
+Analyze results
+
+So don't think:
+
+"Linux is just commands."
+
+Think:
+
+Linux is the environment where your HPC and research work will happen.
+
+
+What is the Kernel?
+
+Suppose you run:
+
+ls
+
+You type this into the terminal.
+
+The process is approximately:
+
+You type: ls
+       ↓
+Shell reads the command
+       ↓
+Shell finds the ls program
+       ↓
+Program asks Linux for directory information
+       ↓
+Linux kernel communicates with storage
+       ↓
+Information is returned
+       ↓
+Terminal displays files
+
+The important concept is:
+
+Applications generally request services from the kernel rather than directly controlling hardware.
+
+This communication happens through mechanisms including system calls.
+
+
+Linux vs Linux Distribution
+
+If Linux is the kernel, then what is Ubuntu?
+
+Ubuntu is a Linux distribution.
+
+A distribution packages:
+
+Linux Kernel
++
+System utilities
++
+Package manager
++
+Libraries
++
+Desktop environment (optional)
++
+Applications
