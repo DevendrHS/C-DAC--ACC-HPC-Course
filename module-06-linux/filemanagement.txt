@@ -1,0 +1,59 @@
+  filesystem in linux---
+
+  A filesystem is the way Linux organizes and stores files and directories.
+
+  /---means root directory
+  /root---means home directory
+
+
+ 1. Your Home Directory: /home
+
+Suppose your username is devendra.
+
+Your personal directory may be:
+
+/home/devendra\
+
+
+4./etc — System Configuration
+
+The /etc directory contains many system-wide configuration files.
+
+
+. /bin — Essential commands
+
+Traditionally, /bin contains essential user commands.
+
+For example, commands such as:
+
+ls
+cp
+mv
+cat
+
+4./var — Variable data
+
+var means variable.
+
+This contains data that changes while the system runs.
+
+Examples:
+
+/var
+├── log
+├── cache
+├── spool
+└── tmp
+
+5./tmp — Temporary Files
+
+Programs can store temporary files here:
+
+/tmp
+
+Example:
+
+cd /tmp
+touch test.txt
+
+
