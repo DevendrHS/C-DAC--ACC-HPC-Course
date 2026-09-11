@@ -1,0 +1,11 @@
+Part 1----Introduction to UNIX---
+
+.Developed at Bell Labs beginning in 1969
+
+• Early contributors included Ken Thompson and Dennis Ritchie
+
+• Reimplemented largely in C, improving portability across hardware
+
+• Combined a small kernel with composable user-space tools
+
+• Spread through universities and commercial vendors, creating multiple branches
