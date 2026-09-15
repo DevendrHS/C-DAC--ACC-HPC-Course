@@ -1,5 +1,7 @@
 Part 1----Introduction to UNIX---
 
+unix origin---
+
 .Developed at Bell Labs beginning in 1969
 
 • Early contributors included Ken Thompson and Dennis Ritchie
@@ -9,3 +11,15 @@ Part 1----Introduction to UNIX---
 • Combined a small kernel with composable user-space tools
 
 • Spread through universities and commercial vendors, creating multiple branches
+
+unix philosophy--
+
+• Build programs that do one focused job well
+
+• Make program output suitable as another program’s input
+
+• Prefer text streams and simple interfaces
+
+• Compose solutions from small tools instead of one oversized utility
+
+• Automate repeatable work through scripts
