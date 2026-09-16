@@ -1,0 +1,280 @@
+
+1..Computer architecture &  Instruction level
+parallelism----------
+---------------------------------------------------------
+These two topics are fundamental to understanding how modern processors achieve high performance.
+
+
+COMPUTER ARCHITECTURE---
+ how a computer converts instructions written by a programmer into actual operations performed by the processor.
+
+ **Computer architecture explains how these operations happen inside the machine.
+
+ Basic Components of a Computer---
+
+                   COMPUTER SYSTEM
+                        |
+        ┌───────────────┼───────────────┐
+        |               |               |
+       CPU            MEMORY          I/O SYSTEM
+        |               |               |
+   ┌────┴────┐      RAM/Cache      ┌────┴────┐
+   |         |                     |         |
+ Control    ALU                  Keyboard  Disk
+ Unit       |                    Display   Network
+            |
+         Registers
+
+ .cpu--execute program instructions
+
+ .register--Registers are very small, very fast storage locations inside the CPU.
+ processors can generally access them much faster than data stored in main memory.
+
+    Memory Hierarchy--
+
+              FASTEST
+             ▲
+             │
+       ┌────────────┐
+       │ Registers  │
+       └─────┬──────┘
+             │
+       ┌────────────┐
+       │ L1 Cache   │
+       └─────┬──────┘
+             │
+       ┌────────────┐
+       │ L2 Cache   │
+       └─────┬──────┘
+             │
+       ┌────────────┐
+       │ L3 Cache   │
+       └─────┬──────┘
+             │
+       ┌────────────┐
+       │    RAM     │
+       └─────┬──────┘
+             │
+       ┌────────────┐
+       │ SSD / Disk │
+       └────────────┘
+             │
+             ▼
+          SLOWEST
+
+Moving downward increases storage capacity.
+Moving downward usually increases access latency.
+Moving upward usually reduces access latency.
+The exact performance depends on the hardware.
+
+
+Why is memory hierarchy necessary?
+
+Suppose a CPU can execute an arithmetic operation in a few cycles, but fetching data from a much slower level of memory takes considerably longer.
+
+The processor may have to wait for the data.
+
+This creates a performance problem:
+
+The CPU is ready to compute, but the required data has not arrived.
+
+This is called a memory-access bottleneck.
+
+HPC systems spend considerable effort reducing such bottlenecks.
+
+
+instruction execution---
+
+1. Fetch instruction
+2. Decode instruction
+3. Read required operands
+4. Execute addition
+5. Store result
+
+fetch--The processor obtains the next instruction from the instruction cache or memory system.
+decode--
+What operation is required?
+Which registers are involved?
+What type of instruction is it?
+
+Execute--
+An appropriate execution unit performs the operation.
+
+Memory--
+If the instruction requires a memory access, the processor reads or writes data.
+
+Write Back--
+The result is written to a destination register or another appropriate location.
+
+
+. Instruction Set Architecture vs Microarchitecture-----
+
+Instruction set architecture--
+
+The ISA defines the instructions and programmer-visible behavior of a processor.
+
+Examples:
+
+x86-64
+ARMv8-A / AArch64
+RISC-V
+IBM Power ISA
+
+An ISA defines things such as:
+
+Available instructions
+Registers visible to software
+Data types
+Addressing modes
+Memory-access behavior
+Exception behavior
+
+Microarchitecture----
+
+Microarchitecture describes how a particular processor implements its ISA.
+
+Two processors may support the same ISA but use different internal designs.
+
+For example, they may differ in:
+
+Pipeline depth
+Number of execution units
+Cache sizes
+Branch prediction
+Out-of-order execution
+Instruction scheduling
+Number of instructions they can issue per cycle
+
+
+
+              SAME ISA
+                 |
+       ┌─────────┴─────────┐
+       |                   |
+   CPU Design A        CPU Design B
+       |                   |
+   4-wide issue        6-wide issue
+   Smaller cache       Larger cache
+   Different pipeline  Different pipeline
+
+   Both processors may execute the same program, but their performance can differ significantly.
+
+   note**--ISA describes what the processor can do. Microarchitecture describes how the processor is built to do it.
+
+
+   Performance Metrics in Computer Architecture-------
+
+To study HPC, you must understand how processor performance is measured.
+
+
+clock frequency--ndicates the number of clock cycles per second.
+   note**
+   But higher frequency does not automatically mean higher performance.
+
+Why?
+
+Because different processors may complete different amounts of useful work per cycle.
+
+
+CPI — Cycles Per Instruction
+
+CPI represents the average number of clock cycles required per instruction.
+
+CPI=   total cpu cycle/no. of instruction
+
+Instructions Per Cycle---inverse of cpi
+
+
+CPU Execution Time---
+
+A fundamental performance equation is:
+
+Cpu time=instruction count x CPI X clock cycle time
+clock cycle time= 1/clock frequency
+
+
+
+INSTRUCTION-LEVEL PARALLELISM----
+
+What is Instruction-Level Parallelism?
+ ILP, is the ability of a processor to execute or overlap multiple independent instructions during the same period of time.
+
+ Without ILP:
+
+Instruction 1 → wait → Instruction 2 → wait → Instruction 3
+
+With ILP:
+
+Instruction 1 ────────────────┐
+Instruction 2 ────────────┐   │
+Instruction 3 ────────┐   │   │
+                      ▼   ▼   ▼
+                  Execution Units
+
+note-- objective is to improve processor utilization and reduce execution time.       
+
+
+
+2. Memory hierarchy (speed vs size)------------
+---------------------------------------------------------------
+the CPU is extremely fast, but large memories are comparatively slow.
+ How can we provide the CPU with data quickly while still having enough storage?
+
+memory hierrarchy is the solution
+
+
+memory hierarchy----
+Memory hierarchy is the organization of different types of memory in a computer system according
+ to their speed, capacity, cost, and distance from the CPU.
+
+
+Memory hierarchy arranges storage devices from:
+
+Fastest to slowest
+Smallest to largest
+Most expensive per byte to least expensive per byte
+
+
+                 CPU
+                  │
+                  ▼
+        ┌──────────────────┐
+        │    Registers     │
+        │ Fastest, smallest│
+        └────────┬─────────┘
+                 │
+        ┌────────▼─────────┐
+        │     L1 Cache     │
+        │ Very fast, small │
+        └────────┬─────────┘
+                 │
+        ┌────────▼─────────┐
+        │     L2 Cache     │
+        │ Fast, larger     │
+        └────────┬─────────┘
+                 │
+        ┌────────▼─────────┐
+        │     L3 Cache     │
+        │ Larger, slower   │
+        └────────┬─────────┘
+                 │
+        ┌────────▼─────────┐
+        │      RAM         │
+        │ Large, slower    │
+        └────────┬─────────┘
+                 │
+        ┌────────▼─────────┐
+        │     SSD/HDD      │
+        │ Very large       │
+        │ Much slower      │
+        └──────────────────┘
+Important: L1, L2, and L3 are generally CPU cache levels. SSD/HDD is secondary storage, 
+not normally part of the CPU's directly accessed memory hierarchy in the same way as caches and RAM.     
+
+
+
+3.Domain specific Applications using HPC, Parallel
+computing--------------
+---------------------------------------------------------------
+
+

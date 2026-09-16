@@ -1,0 +1,52 @@
+
+
+
+
+
+
+
+
+
+
+
+
+simple von Neumann Machine
+
+von neumann architecture
+
+
+why use caches----
+
+
+parallel architectures
+
+multicore machine---
+
+why multicores?
+
+Intel CPU Trends
+
+Symmetric Multiprocessor(SMP)
+
+Accelerators 
+ ->Field Programmable Gate Arrays 
+ ->General Purpose GPU
+
+What is DRAM?
+
+Cluster Computing: Tightly coupled computers that work together closely as though they are a single computer.
+->Processing 
+->Interconnects 
+->Operating Systems 
+->Programming
+
+Supercomputer Clusters
+
+Memory Architectures 
+->Distributed Computing: Different parts of a computer are run simultaneously on seprate computers communincating over a network.
+->Grid Computing: Agrregation, sharing distributed heterogeneous systems.
+->Cloud Computing: On demand available service- IaaS, PaaS,SaaS.
+                   Pay-as-you-use over the internet.
+ 
+
+
