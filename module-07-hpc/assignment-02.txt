@@ -1,0 +1,8 @@
+1. cpu core?
+2. main advantage of having multiple cpu core?
+3. processor has 8 physical core.how many physical processing unit does it
+4.16 core cpu
+5. two cpu have same clock frequency .on ehas 4 core and other has 16 core,what is the difference?
+6. program take 100 second using one core
+if it is perfectly parallalizable and has no over head,approximately how long it take using 10 core?
+

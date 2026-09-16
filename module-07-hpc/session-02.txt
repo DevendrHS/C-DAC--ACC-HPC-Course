@@ -1,0 +1,10 @@
+what is the primary function of CPU
+what is the cpu Core
+if a processor has a 8 core,what does the generally mean
+what happens when cpu needs data that is not available in cache
+what does RAM Primarilaly provide to a running program
+
+
+
+
+Q 10.what is memory bandwidth important in HPC---

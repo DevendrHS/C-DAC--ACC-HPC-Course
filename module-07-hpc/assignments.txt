@@ -276,5 +276,45 @@ not normally part of the CPU's directly accessed memory hierarchy in the same wa
 3.Domain specific Applications using HPC, Parallel
 computing--------------
 ---------------------------------------------------------------
+what is HPC ----
 
 
+Problem
+   ↓
+CPU
+   ↓
+Answer
+
+an hpc system---
+                    Large Problem
+                         │
+                         ▼
+                ┌─────────────────┐
+                │ Parallelization │
+                └────────┬────────┘
+                         │
+          ┌──────────────┼──────────────┐
+          ▼              ▼              ▼
+       CPU Core       CPU Core        GPU
+          │              │              │
+          └──────────────┼──────────────┘
+                         ▼
+                    Final Result
+
+
+        2. What is Parallel Computing?
+
+Parallel computing is a computational approach in which multiple processing elements perform portions of a problem concurrently.            
+
+Sequential vs Parallel Computing---
+A → B → C → D
+vs 
+A ──────►
+B ──────►
+C ──────►
+D ──────►
+
+speedup-----t(sequential)/t (parallel)
+
+
+But Why Don't We Always Get Perfect Speedup?
