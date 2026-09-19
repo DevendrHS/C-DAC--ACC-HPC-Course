@@ -1,4 +1,84 @@
 
+Introduction to HPC and Parallel
+Programming---
+-----------------------------------------------------
+
+Agenda
+• Parallel Computing
+• Parallel Architectures
+• Memory Architectures
+
+
+
+Serial Computing
+• If 1 person takes 15 hours to complete a
+job
+• How long will it take if 15 person work
+together
+
+
+Parallel Computing
+• Save time - wall clock time
+• Solve larger problems
+• Provide concurrency
+• Make better use of underlying
+parallel hardware
+• Take advantage of non-local resources
+
+**Parallelism is the necessity !!
+
+Uses of Parallel Computing-----------------
+
+Science and Engineering
+• Atmosphere, Earth, Environment
+• Physics - applied, nuclear, particle,
+condensed matter, high pressure,
+fusion, photonics
+• Bioscience, Biotechnology, Genetics
+• Chemistry, Molecular Sciences
+• Geology, Seismology
+• Mechanical Engineering - from
+prosthetics to spacecraft
+• Electrical Engineering, Circuit Design,
+Microelectronics
+• Computer Science, Mathematics
+• Defense, Weapons
+
+
+Industrial and Commercial
+• Big Data, databases, data mining
+• Artificial Intelligence (AI)
+• Oil exploration
+• Web search engines, web based
+business services
+• Medical imaging and diagnosis
+• Pharmaceutical design
+• Financial and economic modeling
+• Management of national and multinational corporations
+• Advanced graphics and virtual reality
+• Networked video and multi-media
+technologies
+• Collaborative work environments
+
+
+                      Von Neumann Architecture--
+
+                                  |
+                CPU              RAM              I/O devices                  
+                 |
+        ALU            CU          
+
+
+
+Why use caches
+• Memory Hierarchy
+• Caches are smaller but faster
+(higher bandwidth, less latency)
+than memory
+• Multiple level of cache: L1, L2, L3
+• Helps keep cores fed with data
+• Cache reuse is critical to
+performance
 
 
 
@@ -10,23 +90,16 @@
 
 
 
-simple von Neumann Machine
-
-von neumann architecture
 
 
-why use caches----
+                          
 
 
-parallel architectures
 
-multicore machine---
 
-why multicores?
 
-Intel CPU Trends
 
-Symmetric Multiprocessor(SMP)
+
 
 Accelerators 
  ->Field Programmable Gate Arrays 

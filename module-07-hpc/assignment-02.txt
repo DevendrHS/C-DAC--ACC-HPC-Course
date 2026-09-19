@@ -6,3 +6,8 @@
 6. program take 100 second using one core
 if it is perfectly parallalizable and has no over head,approximately how long it take using 10 core?
 
+7.why might a program not become 10 time faster when using 10 core?
+
+8. if you double the cpu core what hapeened when the the performance of a perfectly parallel program
+9. what doe the mean term multi-core mean?
+10.why do hpc system use processor with many cores?

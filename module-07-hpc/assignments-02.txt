@@ -301,7 +301,7 @@ an hpc system---
                          ▼
                     Final Result
 
-
+98 
         2. What is Parallel Computing?
 
 Parallel computing is a computational approach in which multiple processing elements perform portions of a problem concurrently.            
@@ -315,6 +315,3 @@ C ──────►
 D ──────►
 
 speedup-----t(sequential)/t (parallel)
-
-
-But Why Don't We Always Get Perfect Speedup?

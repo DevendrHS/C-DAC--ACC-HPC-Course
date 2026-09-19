@@ -8,3 +8,9 @@ what does RAM Primarilaly provide to a running program
 
 
 Q 10.what is memory bandwidth important in HPC---
+
+
+
+cache coherence in multi processor----
+
+Shared Memory 
