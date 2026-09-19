@@ -1,16 +1,165 @@
-what is the primary function of CPU
-what is the cpu Core
-if a processor has a 8 core,what does the generally mean
-what happens when cpu needs data that is not available in cache
-what does RAM Primarilaly provide to a running program
+
+Introduction to HPC and Parallel
+Programming---
+Karuna Prasad
+Scientist E
+C-DAC, Bangalore
+karunap@cdac.in
+----------------------------------------------------
+Agenda--
+
+• Flynn’s Taxonomy
+• High Performance Computing in India
+• NSM- Param Utkarsh Supercomputer
+• Parallel Programming Models
+
+
+
+Parallel Computing Classification----------
+
+
+
+Flynn’s Taxonomy--
+Flynn’s Taxonomy classifies computer architectures based on the number of concurrent instruction streams and data streams.
+
+
+SI SD
+│  │
+│  └── Single Data
+└───── Single Instruction
+
+SI MD
+│  │
+│  └── Multiple Data
+└───── Single Instruction
+
+MI SD
+│  │
+│  └── Single Data
+└───── Multiple Instructions
+
+MI MD
+│  │
+│  └── Multiple Data
+└───── Multiple Instructions
+
+
+
+Shared Memory---
+Shared Memory = Multiple cores + Common memory + Read/Write + Synchronization.
+
+       COMMON RAM
+      ↙    ↓    ↘
+   Core1 Core2 Core3
+
+
+ message passing---
+ Message Passing mein different processes/threads ek dusre se data exchange karne
+  ke liye explicitly messages send aur receive karte hain.
+
+Computer 1             Computer 2
+Memory 1                Memory 2
+   │                        ↑
+   └──── Message ───────────┘
+
+
+Shared Memory → OpenMP
+Distributed Memory → MPI
+
+
+Parallel Programming Models----
+
+| Type                   | Technology       | Simple meaning                                                  |
+| ---------------------- | ---------------- | --------------------------------------------------------------- |
+| **Shared Memory**      | **Pthreads**     | Ek machine ke multiple CPU threads                              |
+|                        | **OpenMP**       | Multiple CPU cores ko easily parallel use karna                 |
+| **Distributed Memory** | **MPI**          | Multiple computers/nodes ke beech message exchange              |
+|                        | **PGAS**         | Distributed memory ko global address-space style mein use karna |
+| **Accelerator**        | **CUDA**         | NVIDIA GPU par computation                                      |
+|                        | **OpenACC**      | Directives se CPU work ko GPU/accelerator par offload karna     |
+|                        | **OpenCL**       | CPU/GPU/different accelerators ke liye parallel programming     |
+| **Hybrid**             | **MPI + OpenMP** | Multiple nodes + har node ke CPU cores                          |
+|                        | **MPI + CUDA**   | Multiple nodes + NVIDIA GPUs                                    |
 
 
 
 
-Q 10.what is memory bandwidth important in HPC---
+
+Terminologies--
+
+Parallel Processing
+• Processing multiple tasks simultaneously on multiple
+processors is called parallel processing
+• Parallel Programming
+• Software methodology used to implement parallel
+processing
+• Parallel Computing
+• Encompasses all the technologies used in running
+multiple tasks simultaneously on multiple processors
 
 
 
-cache coherence in multi processor----
 
-Shared Memory 
+High Performance Computing--
+
+1.Process data and perform complex calculations at high speeds
+2.HPC refers to high-speed parallel processing
+3.Multiple computers/servers ko network se connect karke ek saath kaam karwana = Cluster.
+4.HPC system ki computing power normal desktop/laptop se bahut zyada hoti hai.
+
+
+HPC components
+Three main components
+• Compute
+• Network
+• Storage
+
+Units of HPC--
+
+FLOPS = Floating Point Operations Per Second
+
+FLOPS → 1 calculation/second
+
+1 GFLOPS → 1 billion calculations/second
+
+1 TFLOPS → 1 trillion calculations/second
+
+1 PFLOPS → 1 quadrillion calculations/second
+
+1 EFLOPS → 1 quintillion calculations/second
+
+note**
+CPU frequency → GHz
+Memory capacity → GB/TB
+Storage capacity → TB/PB
+Network speed → Gb/s
+Computing performance → FLOPS
+
+
+
+Terminologies
+
+Performance in FLOPS with scale--
+| Unit         | Value | Simple example                 |
+| ------------ | ----: | ------------------------------ |
+| **1 KFLOPS** |   10³ | 1,000 calculations/sec         |
+| **1 MFLOPS** |   10⁶ | 1 million calculations/sec     |
+| **1 GFLOPS** |   10⁹ | 1 billion calculations/sec     |
+| **1 TFLOPS** |  10¹² | 1 trillion calculations/sec    |
+| **1 PFLOPS** |  10¹⁵ | 1 quadrillion calculations/sec |
+| **1 EFLOPS** |  10¹⁸ | 1 quintillion calculations/sec |
+
+
+Supercomputer---
+
+ Supercomputers are a class of high-performance computing (HPC) systems
+designed to offer higher computational power and processing speed.
+• Tightly coupled computers that work together closely as though they are a
+single computer
+
+
+
+
+
+
+
