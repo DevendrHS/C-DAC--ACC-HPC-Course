@@ -1,0 +1,54 @@
+HPC Cluster Components:
+Head or Module node
+Login Node
+Computer Nodes(CPU & GPU nodes)
+Storage System(Parallel File System)
+
+HPC Challenges:
+Cost 
+Scalability
+Data Management
+Programming
+Support for software and tools 
+Power consumption and cooling
+
+*Parallel File Systems
+*Local Sequential File Systems
+
+Performance parameters for supercomputers:
+Standard rate that indicates the number of floating point arithmetic computations a system a can perform per second.
+FLOPS: Floating Point Operations per second
+
+HPL: High Performance Linpack Benchmark
+The code solves a uniformly random system of random equations...
+Precision,performance,and scalability
+
+Cluster Design and Network Considerations
+Requirements: Physical Area
+              Power Supply
+              Adequate cooling capacity to manage heat
+              Ample Security for Physical Threats
+              A dedicated Network
+
+Components of Supercomputer Network
+NIC(Network Interface Cards)
+Switches 
+Firewalls (Hardware & Software)
+Network Mediums(Ethernet,Fiber Channel,Infiniband)
+
+*BuildiNG A Linus CLuster Software
+ 
+ HPC cluster Sceicury:
+ perimeter firewall(UTM)
+ cluster firewall(HA Load balancer and IPS)
+ geographical filtering & Isolated Network
+ Secured Authentication & ACS 
+ PARAM Shivay 
+ PARAM Shakti 
+ PARAM Sanganak
+ PARAM Pravega
+ PARAM Utkarsh (838 Teraflops)
+
+Access Remote HPC Cluster
+
+Job Scheduler- SLURM(Simple Linus Utility For Resource Management)
