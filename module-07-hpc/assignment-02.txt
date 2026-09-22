@@ -53,6 +53,101 @@ Multiple threads can execute different parts of a program concurrently.
 Parallel scalability describes how effectively a program improves its performance when more processors, cores, or nodes are added.
 
 
+
+11. What is Communication Latency?
+
+In distributed HPC systems, processors/nodes frequently exchange data. 
+High latency can slow down the application.
+
+17. What is RDMA?
+
+What:
+RDMA stands for Remote Direct Memory Access.
+
+It allows one computer to access/read/write memory on another computer with minimal involvement of the remote CPU and operating system.
+
+Why:
+It reduces communication overhead and latency, which is very useful in HPC.
+
+
+8. What is a GPU Accelerator?
+A GPU accelerator is a GPU used alongside the CPU to accelerate highly parallel computational tasks.
+Why:
+GPUs contain many processing units and can perform many similar operations simultaneously.
+
+CPU:
+Pixel 1 → Pixel 2 → Pixel 3 → Pixel 4
+        sequential/limited parallelism
+
+GPU:
+Pixel 1 ┐
+Pixel 2 ├→ Many operations simultaneously
+Pixel 3 │
+Pixel 4 ┘
+
+19. What is Heterogeneous Computing?
+means using different types of processors together, such as CPUs and GPUs,
+ to execute different parts of a workload.
+
+
+
+20. Why is Workload Characterization Important in HPC?
+Workload characterization means understanding the characteristics of an application/workload,
+ such as:
+
+How much computation it needs
+How much memory it needs
+How much data it moves
+How much communication it requires
+How parallel it is
+
+Why:
+Different applications need different hardware and optimization strategies.
+
+
+                  ASSIGNMENT PART-02---
+
+1. HPC Hardware Architecture
+HPC hardware architecture describes the physical components used to build an HPC system, such as CPU, memory, storage, compute nodes, GPU accelerators, and network interconnects.
+
+Why:
+These components work together to provide high computational performance.
+
+
+
+2. Modern CPU-GPU HPC Systems--
+Modern HPC systems often combine CPUs and GPUs. 
+The CPU handles general-purpose/control tasks, while GPUs accelerate highly parallel computations.
+
+Why:
+Different processors are suitable for different types of workloads.
+
+              HPC System
+                  |
+          ┌───────┴───────┐
+          ↓               ↓
+        CPU              GPU
+   General tasks    Parallel tasks
+          \               /
+           \             /
+            Application
+
+3. UMA and NUMA
+
+UMA--
+CPU 1 ─┐
+CPU 2 ─┼── Shared Memory
+CPU 3 ─┘
+
+
+In NUMA, memory is physically distributed,
+ and access time depends on which CPU and memory region are involved.
+
+
+
+
+
+
 1. cpu core?
 2. main advantage of having multiple cpu core?
 3. processor has 8 physical core.how many physical processing unit does it
@@ -79,6 +174,5 @@ what does RAM Primarilaly provide to a running program
 
 
 Q 10.what is memory bandwidth important in HPC---
-
 
 
