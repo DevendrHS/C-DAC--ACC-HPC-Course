@@ -152,3 +152,48 @@ C is one of the most important programming languages and serves as the foundatio
 5. What is the purpose of printf()?
 
 End of Module 1 – Introduction to C Programming
+
+
+
+----------------------------------------------------------------
+GATE Preparation --lec 1
+
+1.computer and its language---
+2.basic task of computer---
+3.computer understand language--  binary language(0,1)
+4. Assembly language(low level language)---use mneumonic instruction to represent machine code instruction
+5.high level language---human understable language.--uses english word and mathematics symbol
+6.translation of one language to another---  compiler--(language is syntax,syntax checking)
+7.C developed by--Dennis Ritchie in Bell laboritries
+8.application of c--
+1.compiler & assembler
+2. embeded system--program microcontroller
+3.IOT--internet of things
+4.game
+5.web server
+
+lec 2
+-------------
+
+1.system program---(program help in translation of high level to low level)
+
+src prog.-->preprocessor-->modified src prg.-->compiler-->target assembly prg.-->assembler-->relocatable mac.code
+-->linker &loader---> machine code
+
+
+src. prg--high level language
+preprocessor--called macro processor ,it allow you to define macros 
+  it is used automatically by c compiler to tranform your prg.before actual compilation 
+
+  compiler--check syntax and generate object code(assembly code) not executable code
+  assembler---output is executable code
+  relocatable machine code--  it can be executed any part of main memory
+  linker--it combine a object code and necessary libraries and module to create an executable file
+
+  loader--load executable file in memory for execution
+
+  obj. file--output of compiler & its consist of target machine lang code
+  exe.file--- consists of machine inst code which can be executed by processor
+
+  
+          
