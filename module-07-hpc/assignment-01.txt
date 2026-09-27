@@ -315,3 +315,163 @@ C ──────►
 D ──────►
 
 speedup-----t(sequential)/t (parallel)
+
+
+But Why Don't We Always Get Perfect Speedup?
+
+This is extremely important for HPC.
+
+Real applications contain:
+
+Sequential portions
+Communication
+Synchronization
+Memory bottlenecks
+Load imbalance
+I/O
+Parallelization overhead
+
+
+Even if the parallel part becomes extremely fast, the sequential portion remains.
+
+This is described by Amdahl's Law.
+
+
+Why Do Different Domains Need HPC?
+
+Some problems are simply too computationally expensive for a normal desktop to solve efficiently.
+
+For example:
+
+Weather simulation
+
+You might need to model:
+
+Temperature
+Pressure
+Wind
+Humidity
+Atmospheric motion
+
+across a huge geographic region.
+
+You cannot simply calculate one location and stop.
+
+You need millions or billions of numerical calculations.
+
+HPC allows these calculations to be distributed across many processing units.
+
+
+
+4.How is Avatar movie, which is virtual reality
+based movie, developed??---------
+---------------------------------------------
+think movie as a pipeline
+
+                 REAL ACTORS
+                      │
+                      ▼
+              Motion/Performance
+                  Capture
+                      │
+                      ▼
+             Digital Characters
+                      │
+                      ▼
+        ┌──────────────────────────┐
+        │  3D Modeling + Animation │
+        └────────────┬─────────────┘
+                     │
+                     ▼
+            Digital Environment
+                     │
+                     ▼
+              Lighting + Effects
+                     │
+                     ▼
+              Rendering
+                     │
+                     ▼
+               Compositing
+                     │
+                     ▼
+                Final Movie
+
+
+
+
+
+5.Cloud computing, IaaS, PaaS, SaaS
+
+1. What is Cloud Computing?
+Cloud computing means using computing resources such as servers, storage, databases, networking, and software over the Internet
+ instead of owning and managing all the physical hardware yourself.
+
+
+Why Do We Need Cloud Computing?
+
+Buy Server
+    ↓
+Install OS
+    ↓
+Configure Network
+    ↓
+Install Database
+    ↓
+Maintain Hardware
+    ↓
+Handle failures
+
+Cloud computing follows a somewhat similar idea:
+
+Cloud Provider
+      ↓
+Computing Resources
+      ↓
+Your Application
+      ↓
+You pay according to service/usage
+
+
+
+Three Important Cloud Service Models
+
+The three models you need to remember are:
+
+                 Cloud Computing
+                       │
+          ┌────────────┼────────────┐
+          ↓            ↓            ↓
+         IaaS         PaaS         SaaS
+          │            │            │
+ Infrastructure      Platform     Software
+   as a Service      as a Service  as a Service
+
+
+
+   . IaaS — Infrastructure as a Service
+IaaS provides basic computing infrastructure such as:
+
+Virtual machines
+CPU
+RAM
+Storage
+Networking
+Virtual networks
+Firewalls and related infrastructure services
+
+Instead of buying a physical server, you rent a virtual server.
+
+
+PaaS — Platform as a Service
+Here the cloud provider gives you a ready-to-use application platform.
+
+You don't have to worry as much about:
+
+Physical Server
+       ↓
+Virtual Machine
+       ↓
+Operating System
+       ↓
+Runtime setup
