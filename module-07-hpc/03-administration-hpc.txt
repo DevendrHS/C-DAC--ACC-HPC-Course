@@ -1,0 +1,182 @@
+                HPC Clusters and Architecture---
+ -----------------------------------------
+
+ Agenda--
+
+HPC Clusters and Architecture 	   
+HPC system components 	
+Parallel file systems					
+Performance Parameters for supercomputers     			
+Cluster Design and network considerations			
+Components of supercomputer Network			
+Building a Linux cluster 				
+HPC cluster security				
+---------------------------------------------------------------
+
+what is HPC--
+it stand high performance computing i.e uese a parallel processing to run a complex  application program rapidly
+
+ what is supercomputer--
+ it is a type of  computer that has  far higher processing capabilities than a normal computer
+
+
+What is HPC Architecture?
+a cluster of connected computer servers offers exceptional performance over that of a single machine
+
+
+How do clusters work?
+a group of computers collectively function as a single node that may take jobs and perform calculations.
+
+A HPC Cluster is what?
+An HPC (High-Performance Computing) Cluster is a group of multiple powerful computers, called nodes, connected through a high-speed 
+network and working together as one large computing system.
+
+
+ HPC System Key Components--   
+
+Compute
+Network
+Storage
+Security
+
+compute--is concerned with processing data, running programs or algorithms, and resolving issues. 
+
+network--
+Many individuals mistakenly think that local area networks and the internet are the same as HPC networks
+
+. These are two distinct architectures, though. Packaging restrictions and wire length are just two of the variables taken into account while designing an HPC network. Several apps run smoothly on the network thanks to its smart physical network structure. In HPC networks,
+
+common topologies include:
+Bus
+Point to Point
+Mesh or Grid
+Torus
+
+storage--
+A crucial part of the HPC infrastructure that keeps the CPU running at high speeds is storage systems. It efficiently reads and writes data from disk drivers at the same time.
+
+
+HPC Architecture tool
+
+Tools:
+HPC Schedulers 
+Load Balancer 
+Cluster Management tool
+
+HPC Architecture Diagram---
+
+                           USER
+                            │
+                            │ SSH / Login
+                            ▼
+                   ┌──────────────────┐
+                   │    LOGIN NODE    │
+                   │                  │
+                   │ User access      │
+                   │ Compile code     │
+                   │ Submit jobs      │
+                   └────────┬─────────┘
+                            │
+                            ▼
+                   ┌──────────────────┐
+                   │  HEAD / MASTER   │
+                   │      NODE        │
+                   │                  │
+                   │ Job Scheduler    │
+                   │ Cluster Manager  │
+                   │ Monitoring       │
+                   └────────┬─────────┘
+                            │
+                 Job Scheduling / Allocation
+                            │
+            ┌───────────────┼────────────────┐
+            │               │                │
+            ▼               ▼                ▼
+     ┌────────────┐  ┌────────────┐   ┌────────────┐
+     │ CPU NODE 1 │  │ CPU NODE 2 │   │  GPU NODE  │
+     │            │  │            │   │            │
+     │ CPU + RAM  │  │ CPU + RAM  │   │ GPU+CPU+RAM│
+     └──────┬─────┘  └──────┬─────┘   └──────┬─────┘
+            │               │                │
+            └───────────────┼────────────────┘
+                            │
+                  ⚡ HIGH-SPEED NETWORK ⚡
+                       (InfiniBand)
+                            │
+                            ▼
+                  ┌──────────────────┐
+                  │ PARALLEL STORAGE │
+                  │                  │
+                  │ Large Datasets   │
+                  │ Programs         │
+                  │ Results          │
+                  └──────────────────┘
+
+
+HPC cluster components--
+
+Head or Master Node ---Cluster ka management/control center
+Login Node---user login via node in cluster
+Compute Nodes (CPU & GPU nodes)---actual computation
+Storage System(Parallel file system)--Multiple storage resources ko use karke large data ko efficiently read/write karna.
+Infiniband Interconnection--Compute nodes ko aapas mein communicate karne ke liye high-speed interconnect chahiye.
+
+
+
+HPC software stack--
+
+┌──────────────────────────────────────┐
+│       HPC APPLICATION                │
+│ AI / Simulation / Weather / CFD      │
+└──────────────────┬───────────────────┘
+                   ↓
+┌──────────────────────────────────────┐
+│       PROGRAMMING MODELS             │
+│ MPI | OpenMP | CUDA | OpenACC        │
+└──────────────────┬───────────────────┘
+                   ↓
+┌──────────────────────────────────────┐
+│       COMPILERS & LIBRARIES          │
+│ GCC | Intel | NVIDIA | BLAS | FFT    │
+└──────────────────┬───────────────────┘
+                   ↓
+┌──────────────────────────────────────┐
+│       JOB SCHEDULER                  │
+│ Slurm | PBS                          │
+└──────────────────┬───────────────────┘
+                   ↓
+┌──────────────────────────────────────┐
+│       OS / SYSTEM SOFTWARE           │
+│ Linux | Drivers | Runtime            │
+└──────────────────┬───────────────────┘
+                   ↓
+┌──────────────────────────────────────┐
+│       HPC HARDWARE                   │
+│ CPU | GPU | RAM | Storage | Network  │
+└──────────────────────────────────────┘
+
+
+Most important: HPC software stack ka goal sirf program ko run karna nahi hai; goal hai available CPU, GPU, memory, storage aur network resources ko efficiently use karke parallel computation perform karna.
+
+HPC: Challenges
+
+Cost
+Scalability
+Data Management
+Programming
+Support for software and tools
+Power consumption and cooling
+
+--------------------------------------------------------------
+
+              Parallel file system----
+
+File system decide karta hai:
+
+File kahan hai
+File ka size kya hai
+File kab bani
+File ko kaun access kar sakta hai
+File ka actual content kya hai
+              
+            
