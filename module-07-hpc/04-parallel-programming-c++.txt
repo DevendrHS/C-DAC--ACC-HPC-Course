@@ -1,0 +1,71 @@
+           Parallel Programming Using C++---
+           ------------------------------------------
+   Agenda--
+  Introduction to Parallel Computing
+   Parallel Program Design 
+   Parallel Performance Metrics
+    HPC Job Management
+   References 
+   ------------------------------------------------
+Introduction to Parallel Computing--
+
+
+serial-- tasks run sequentially on the core
+
+Concurrent : tasks run on the same core in time sharing.
+
+ Parallel : tasks run at the same time, on different cores.
+
+
+ Parallel Computing :
+  “Solving a problem using multiple processors simultaneously.”
+  • Divide a task into smaller subtasks executed in parallel •
+   Examples: weather modeling, video rendering, AI training
+
+Multi-processor Programming:    
+ “A parallel programming model where all processing units are of the same type.”
+
+ Heterogeneous Parallel Programming (HPP) : 
+ “A parallel programming model where different types of processors work together to execute tasks.”
+ CPU+GPU
+---------------------------------------------------------
+
+                               Parallel Program Design-----
+
+Partitioning--
+break the problem in to smaller tasks
+
+Communication —
+Determine what data/tasks must exchange information, 
+and define required communication patterns
+
+Agglomeration — 
+Group fine-grained tasks into larger ones to reduce communication overhead and improve efficiency
+
+Mapping —
+Assign tasks to physical processors, balancing load and minimizing inter-processor communication
+
+
+
+Parallel Performance Metrics
+
+Speedup (S) = Sequential Time / Parallel Time
+
+Efficiency (E) = Speedup / No. of Processors
+
+complexity--time/space cost of parallel algorithm
+
+Classification : Flynn's Taxonomy — SISD, SIMD, MISD, MIMD
+
+
+
+HPC Job Management---
+
+Scheduler--decides which job runs when and where (e.g., SLURM, PBS)
+
+Job Submission--user submits script specifying resources & time
+
+Batch System-queues and executes jobs without manual intervention
+
+Resource Manager--allocates CPUs, memory, nodes to jobs efficiently
+
