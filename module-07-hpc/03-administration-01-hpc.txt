@@ -171,6 +171,13 @@ Power consumption and cooling
 
               Parallel file system----
 
+Parallel file systems are designed to support efficient data access in high-performance computing environments
+
+A file system organizes files and manages their contents. Data refers to the actual information stored in a file, whereas metadata describes properties such as file size, storage location, timestamps, ownership, and permissions.
+
+
+
+
 File system decide karta hai:
 
 File kahan hai
@@ -178,5 +185,63 @@ File ka size kya hai
 File kab bani
 File ko kaun access kar sakta hai
 File ka actual content kya hai
-              
-            
+
+
+           local sequential file system---   
+A local file system manages files on a local machine. Applications access files through
+ the operating system. Unlike a parallel file system designed for multiple clients,
+  a local file system does not inherently provide shared parallel access across multiple compute nodes
+
+
+Structure a File on ext4 File System---
+
+The ext4 file system organizes files and manages their storage on a disk. The slide introduces an example of how a file is structured within ext4.
+
+
+Parallel File Systems---
+
+A parallel file system allows multiple clients to access files simultaneously. It can distribute data across multiple data servers to improve data-access performance.
+ This parallelism is generally transparent to the client, which interacts with the file system through a unified interface. The system must also manage concurrent access 
+ and prevent conflicting operations through mechanisms such as locks.
+
+
+ Architecture – Parallel File System---
+
+A parallel file system architecture connects client nodes, metadata management components, data servers, and a network. These components work together to provide
+ shared file access and support parallel data operations in an HPC environment.
+
+
+A typical parallel file system consists of clients, metadata servers, data servers, and networks. Clients read and write files, metadata servers manage file 
+information and data placement, and data servers store the actual content. Networks connect these components, while access-control mechanisms such as locks
+ help manage conflicting operations. Depending on the implementation, metadata and data may be handled by separate servers or by the same server.
+
+
+ Main Parallel File Systems----
+
+ Parallel file systems provide shared storage capabilities for high-performance computing environments. The four systems listed in
+  the presentation are Lustre, GPFS, PVFS2/OrangeFS, and PanFS. These technologies support data-access requirements in parallel
+   computing environments, although their architectures and specific features differ.
+
+
+   Lusture----
+Lustre is an open-source parallel file system designed for high-performance computing environments. Its architecture separates
+ metadata management from file-data access. Metadata Servers manage metadata through Metadata Targets, while Object Storage
+
+
+
+
+Lustre architecture
+
+Lustre architecture separates metadata management from file-data access. Clients use metadata services to locate file
+ data and communicate with Object Storage Servers to read or write it. This architecture supports parallel and scalable 
+ data access for high-performance computing workloads.
+
+
+ Lustre: How Does It Work?
+
+ Lustre separates metadata management from actual file-data access. When a client requests a file, it contacts 
+ the Metadata Server (MDS) to obtain the necessary metadata information. The client then communicates with the 
+ relevant Object Storage Servers (OSSs) to read or write data stored on Object Storage Targets (OSTs). Locking mechanisms help coordinate concurrent access to shared data.
+
+
+ 
