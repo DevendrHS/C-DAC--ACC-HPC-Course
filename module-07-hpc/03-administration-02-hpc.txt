@@ -1,0 +1,33 @@
+Performance Parameters for Supercomputers---
+
+
+Supercomputer performance parameters help us evaluate the computational 
+capability and efficiency of high-performance computing systems. Metrics such as FLOPS,
+ theoretical peak performance, benchmark performance, and scalability help us understand
+  how effectively a supercomputer performs scientific and computational tasks.
+
+
+  Supercomputer performance is commonly expressed in FLOPS, which measures floating-point operations per second.
+   Rpeak represents the theoretical peak computational capability of a system and can be estimated from its processing
+    resources, clock frequency, and floating-point operation capability. Benchmarks such as HPL and HPC Challenge help evaluate system performance, but measured benchmark results should not be confused with theoretical peak performance.
+
+
+HPL: A Portable Implementation of the High-Performance Linpack Benchmark-----
+
+HPL (High-Performance Linpack) is a portable benchmark used to evaluate the floating-point performance of high-performance 
+computing systems. It solves large systems of linear equations and reports execution time and achieved performance. Developed in C, 
+HPL uses MPI for parallel communication and numerical libraries such as BLAS for mathematical operations. Its results are widely used in evaluating supercomputer performance, including for the TOP500 rankings.
+
+
+
+
+HPL: Precision, Performance and Scalability---
+
+HPL is a portable benchmark that solves large dense linear systems using double-precision floating-point arithmetic on distributed-memory computers.
+ It evaluates numerical correctness and measures execution time and achieved computational performance. Its scalability depends on factors such as processor 
+ capabilities, memory usage, network communication, MPI implementation, and numerical libraries. Efficient resource utilization is essential for achieving 
+ good parallel performance on HPC clusters.
+
+
+
+ Cluster Design and Network Considerations--
